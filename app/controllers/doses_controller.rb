@@ -1,4 +1,4 @@
-class IngredientsController < ApplicationController
+class DosesController < ApplicationController
   before_action :set_dose, only: [:destroy] # [:show, :edit, :update]
 
   def new
