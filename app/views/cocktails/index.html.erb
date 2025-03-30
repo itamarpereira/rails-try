@@ -1,0 +1,30 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="navbar-left">
+    <h2><strong><%= link_to "Toros Cocktails", cocktails_path %></strong></h2>
+  </div>
+  <p class="btn btn-grad"><%= link_to 'Create Your Cocktail', new_cocktail_path %></p>
+</div>
+<div class="banner">
+  <div class="container-ban">
+    <h1>All our cocktails (<%= @cocktails.count %>)</h1>
+    <p><em id="navbar-typed-text"></em></p>
+  </div>
+</div>
+<div>
+  <ul class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <li class="card" style="background-image: url('<%#= cl_image_path cocktail.photo.key %>')">
+      <h2><%#= link_to cocktail.name, cocktail %></h2>
+    </li>
+    <li class="card-product">
+      <img src="<%#= cl_image_path cocktail.photo.key %>" />
+      <div class="card-product-infos">
+        <h2><%= link_to cocktail.name, cocktail %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+ <%#= cl_image_tag("oermda8ecp66isbbi7vp") %>
